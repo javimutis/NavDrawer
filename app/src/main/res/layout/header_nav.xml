@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
- xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/header_nav"
     android:layout_width="match_parent"
     android:layout_height="180dp"
@@ -10,9 +9,10 @@
     android:padding="15dp">
 
     <TextView
+        android:id="@+id/txtInformation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hola Menu"
+        android:text="@string/hola_menu"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:gravity="center_vertical"

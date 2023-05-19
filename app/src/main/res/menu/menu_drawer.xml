@@ -11,16 +11,16 @@
             android:title="@string/home" />
 
         <item
-            android:id="@+id/arrivals"
-            android:icon="@drawable/baseline_flight_land_24"
-            app:itemIconTint="@color/icon_tint_color"
-            android:title="@string/llegadas" />
-
-        <item
             android:id="@+id/departures"
             android:icon="@drawable/baseline_flight_takeoff_24"
             app:itemIconTint="@color/icon_tint_color"
-            android:title="Salidas" />
+            android:title="@string/departures" />
+
+        <item
+            android:id="@+id/arrivals"
+            android:icon="@drawable/baseline_flight_land_24"
+            app:itemIconTint="@color/icon_tint_color"
+            android:title="@string/arrivals" />
     </group>
 
     <item android:title="Otros">

@@ -1,4 +1,4 @@
-package com.example.navdrawer.interfaces
+package com.example.navdrawer
 
 import androidx.appcompat.widget.Toolbar
 
