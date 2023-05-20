@@ -10,4 +10,5 @@
     <string name="hello_arrivals" >Hello arrivals fragment</string>
     <string name="hello_departures">Hello departures fragment</string>
    <string name="hola_menu">Hola Menu</string>
+    <string name="city">Ciudad de Destino</string>
 </resources>

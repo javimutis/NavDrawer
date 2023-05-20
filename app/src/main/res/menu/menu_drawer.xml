@@ -6,36 +6,36 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/home"
-            android:icon="@drawable/baseline_home_24"
-            app:itemIconTint="@color/icon_tint_color"
-            android:title="@string/home" />
+            android:title="@string/home"
+            android:icon="@drawable/home_icon"
+            android:tint="@color/icon_tint_color"/>
 
         <item
             android:id="@+id/departures"
-            android:icon="@drawable/baseline_flight_takeoff_24"
-            app:itemIconTint="@color/icon_tint_color"
-            android:title="@string/departures" />
+            android:title="@string/departures"
+            android:icon="@drawable/departure_icon"
+            android:tint="@color/icon_tint_color"/>
 
         <item
             android:id="@+id/arrivals"
-            android:icon="@drawable/baseline_flight_land_24"
-            app:itemIconTint="@color/icon_tint_color"
-            android:title="@string/arrivals" />
+            android:title="@string/arrivals"
+            android:icon="@drawable/arrival_icon"
+            android:tint="@color/icon_tint_color"/>
     </group>
 
     <item android:title="Otros">
         <menu>
             <item
                 android:id="@+id/profile"
-                android:icon="@drawable/baseline_person_24"
-                app:itemIconTint="@color/icon_tint_color"
-                android:title="Perfil" />
+                android:title="Perfil"
+                android:icon="@drawable/user_icon"
+                android:tint="@color/icon_tint_color"/>
 
             <item
                 android:id="@+id/setting"
-                android:icon="@drawable/baseline_settings_24"
-                app:itemIconTint="@color/icon_tint_color"
-                android:title="Configuración" />
+                android:title="Configuración"
+                android:icon="@drawable/settings_icon"
+                android:tint="@color/icon_tint_color"/>
         </menu>
     </item>
 </menu>

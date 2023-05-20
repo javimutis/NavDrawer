@@ -12,6 +12,7 @@ import cl.bootcamp.navdrawer.databinding.ActivityMainBinding
 import com.example.navdrawer.fragments.ArrivalsFragment
 import com.example.navdrawer.fragments.DeparturesFragment
 import com.example.navdrawer.fragments.HomeFragment
+import com.example.navdrawer.interfaces.IActionBarApp
 import com.google.android.material.navigation.NavigationView
 
 private lateinit var bindingMain: ActivityMainBinding
