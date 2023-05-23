@@ -5,10 +5,10 @@ import android.view.MenuItem
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
-import cl.bootcamp.navdrawer.R
-import cl.bootcamp.navdrawer.databinding.ActivityMainBinding
+import com.example.navdrawer.databinding.ActivityMainBinding
 import com.example.navdrawer.fragments.ArrivalsFragment
 import com.example.navdrawer.fragments.DeparturesFragment
 import com.example.navdrawer.fragments.HomeFragment
@@ -23,19 +23,23 @@ class MainActivity : ActionBarActivity(), IActionBarApp,
         super.onCreate(savedInstanceState)
         bindingMain = ActivityMainBinding.inflate(layoutInflater)
         setContentView(bindingMain.root)
-        _toolbar = findViewById(R.id.toolbar_id)
+        _toolbar = findViewById(R.id.toolbar)
         loadActionBarInActivity(_toolbar)
         configurationDrawer()
         setAppInformation()
-                if(savedInstanceState==null) fragmentTransaction(HomeFragment())
+        if(savedInstanceState == null ) fragmentTransaction(HomeFragment())
+
     }
 
     private fun configurationDrawer() {
 
         var toogle = ActionBarDrawerToggle(
-            this, bindingMain.drawer, _toolbar,
+            this,
+            bindingMain.drawer,
+            _toolbar,
             R.string.drawerClose, R.string.drawerOpen
         )
+        // Activar el menu hamburguesa
         toogle.isDrawerIndicatorEnabled
         bindingMain.drawer.addDrawerListener(toogle)
 
@@ -43,6 +47,7 @@ class MainActivity : ActionBarActivity(), IActionBarApp,
 
         toogle.syncState()
         bindingMain.navigation.setNavigationItemSelectedListener(this)
+
 
     }
 
@@ -55,33 +60,39 @@ class MainActivity : ActionBarActivity(), IActionBarApp,
             R.id.home -> fragmentTransaction(HomeFragment())
             R.id.arrivals -> fragmentTransaction(ArrivalsFragment())
             R.id.departures -> fragmentTransaction(DeparturesFragment())
-
-
         }
 
     }
 
     private fun loadOtherOptions(idOption: Int) {
+
         when (idOption) {
+
             R.id.profile -> Toast.makeText(
-                this, "Aca va el perfil de Usuario",
-                Toast.LENGTH_LONG
+                this,
+                "Aca va el perfil del Usuario", Toast.LENGTH_LONG
             ).show()
 
-            R.id.setting -> Toast.makeText(
-                this, "Aca va la configuración",
-                Toast.LENGTH_LONG
+            R.id.settings -> Toast.makeText(
+                this,
+                "Aca va la configuracion de la APP", Toast.LENGTH_LONG
             ).show()
         }
+
     }
 
     private fun setAppInformation() {
-        var name =
-            bindingMain.navigation.getHeaderView(0).findViewById<TextView>(R.id.txtInformation)
+
+        var name = bindingMain.navigation
+            .getHeaderView(0)
+            .findViewById<TextView>(R.id.txtInformation)
 
         name?.let {
-            name.text= "Usuario de la BD o de la API"
+
+            name.text = "Usuario de la BD o de la API"
+
         }
+
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
@@ -90,6 +101,4 @@ class MainActivity : ActionBarActivity(), IActionBarApp,
         bindingMain.drawer.closeDrawer(GravityCompat.START)
         return true
     }
-
-
 }

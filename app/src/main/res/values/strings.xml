@@ -6,9 +6,10 @@
     <string name="arrivals">Llegadas</string>
     <string name="departures">Salidas</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank">Hello blank fragment</string>
+    <string name="hello_home">Hello blank fragment</string>
     <string name="hello_arrivals" >Hello arrivals fragment</string>
     <string name="hello_departures">Hello departures fragment</string>
    <string name="hola_menu">Hola Menu</string>
     <string name="city">Ciudad de Destino</string>
+    <string name="ciudad_de_destino">Ciudad de Destino</string>
 </resources>
